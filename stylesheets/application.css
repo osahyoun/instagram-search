@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lucida Grande', sans-serif;
+  color: #333;
+  background: #EBEBEB url(../images/tile.png) repeat 0 0;
+}
+
+#search {
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 240px;
+  margin: 0 auto;
+  z-index: 100;
+  left: 50%;
+  top: 0;
+  margin-left: -130px;
+/*  background: #EBEBEB url(../images/tile.png) repeat 0 0;*/
+  border-radius:0 0 5px 5px;
+/*  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);*/
+}
+
+#search input {
+  padding: 5px;
+  width: 180px;
+  outline: none;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+#search button {
+  float: right;
+  border-radius: 0 3px 3px 0;
+}
+
+#search button span {
+  display: block;
+  border: none;
+  padding: 0;
+  background: transparent url(../images/glass.png) no-repeat 0 0;
+  width: 14px;
+  height: 14px;
+  opacity: .6;
+  text-indent: -10000px;
+}
+
+.search-wrap {
+  background: white;
+  line-height: 30px;
+  height: 30px;
+  text-align: left;
+  border-radius: 3px;
+  width: 230px;
+  margin: 0;
+  border: 1px solid #ddd;
+}
+
+#photos-wrap {
+  width: 810px;
+  margin: 70px auto 40px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.photo .avatar {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  position: absolute;
+  bottom: 11px;
+  right: 8px;
+  background: white;
+}
+
+.photo  {
+  margin-bottom: 20px;
+  float: left;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  background: white;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.photo .heart {
+  height: 16px;
+  position: absolute;
+  left: 13px;
+  bottom: 16px;
+  padding: 0 5px 0 22px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  background: white url('../images/fav.png') no-repeat 2px 0;
+}
+
+.paginate {
+  display: block;
+  clear: both;
+  margin: 10px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: 100px;
+}
+
+.button {
+  height: 32px;
+  padding: 10px;
+  background-color: #E0E0E0;
+  border: 1px solid #ddd;
+  background-image: -moz-linear-gradient(top,white 0,#E0E0E0 100%);
+  background-image: -ms-linear-gradient(top,white 0,#E0E0E0 100%);
+  background-image: -o-linear-gradient(top,white 0,#E0E0E0 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,white),color-stop(100%,#E0E0E0));
+  background-image: -webkit-linear-gradient(top,white 0,#E0E0E0 100%);
+  background-image: linear-gradient(to bottom,white 0,#E0E0E0 100%);
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration:none;
+  font-size: 12px;
+  color: #222;
+  text-shadow: white 1px 0px;
+}
