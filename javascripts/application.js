@@ -108,7 +108,7 @@ Instagram.Template.generate = function(template, data){
     });
     
     // Bind an event handler to the `click` event on the form's button
-    $('form#search button').click(function(){
+    $('form#search button').on('click', function(){
       // Extract the value of the search input text field.
       var tag = $('input.search-tag').val();
 
