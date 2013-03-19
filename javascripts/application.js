@@ -101,7 +101,7 @@ Instagram.Template.generate = function(template, data){
   }
 
   function bindEventHandlers(){
-    $('body').on('click', '.paginate a.button', function(){
+    $('body').on('click', '.paginate a.btn', function(){
       var tagID = $(this).attr('data-max-tag-id');
       fetchPhotos(tagID);
       return false;

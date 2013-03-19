@@ -1,14 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Lucida Grande', sans-serif;
-  color: #333;
-  background: #EBEBEB url(../images/tile.png) repeat 0 0;
-}
-
 #search {
   height: 40px;
   padding: 10px;
@@ -20,18 +9,7 @@ body {
   left: 50%;
   top: 0;
   margin-left: -130px;
-/*  background: #EBEBEB url(../images/tile.png) repeat 0 0;*/
   border-radius:0 0 5px 5px;
-/*  box-shadow: 0px 3px 5px rgba(0,0,0,0.3);*/
-}
-
-#search input {
-  padding: 5px;
-  width: 180px;
-  outline: none;
-  border: 0;
-  background: transparent;
-  font-size: 14px;
 }
 
 #search button {
@@ -113,23 +91,4 @@ body {
   margin: 0 auto;
   padding: 20px 0;
   height: 100px;
-}
-
-.button {
-  height: 32px;
-  padding: 10px;
-  background-color: #E0E0E0;
-  border: 1px solid #ddd;
-  background-image: -moz-linear-gradient(top,white 0,#E0E0E0 100%);
-  background-image: -ms-linear-gradient(top,white 0,#E0E0E0 100%);
-  background-image: -o-linear-gradient(top,white 0,#E0E0E0 100%);
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,white),color-stop(100%,#E0E0E0));
-  background-image: -webkit-linear-gradient(top,white 0,#E0E0E0 100%);
-  background-image: linear-gradient(to bottom,white 0,#E0E0E0 100%);
-  border-radius: 3px;
-  cursor: pointer;
-  text-decoration:none;
-  font-size: 12px;
-  color: #222;
-  text-shadow: white 1px 0px;
 }

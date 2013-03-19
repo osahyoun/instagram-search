@@ -3,6 +3,8 @@
 <head>
   <script src='http://code.jquery.com/jquery-1.7.2.min.js' type='text/javascript' charset='utf-8'></script>
   <script src='javascripts/application.js' type='text/javascript' charset='utf-8'></script>
+  <link rel="stylesheet" href="stylesheets/application.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
   <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css' type='text/css' media='screen'>  
   <title>Grammy - Search Instagram Images</title>
 
@@ -10,21 +12,24 @@
 	<meta name="author" content="Omar Sahyoun">
 </head>
 <body>
-  <form id='search'>
-    <button class="button" type="submit" id="search-button" dir="ltr" tabindex="2">
-      <span class="button-content">Search</span>
-    </button>
-    <div class='search-wrap'>
-      <input class='search-tag' type='text' tabindex='1' value='cats' />
+  <div class='container'>
+    <div class='row'>
+      <div class='span12'>
+        <form id='search'>
+          <div class="input-append">
+            <input class='search-tag' type='text' tabindex='1' value='cats' />
+            <button class="btn" id="search-button" dir="ltr" tabindex="2" type="button">Search</button>
+          </div>
+        </form>
+
+        <div id='photos-wrap'>
+        </div>
+
+        <div class='paginate'>
+          <a class='btn'  style='display:none;' data-max-tag-id='' href='#'>View More...</a>
+        </div>
+      </div>
     </div>
-  </form>
-
-  <div id='photos-wrap'>
   </div>
-
-  <div class='paginate'>
-    <a class='button'  style='' data-max-tag-id='' href='#'>View More...</a>
-  </div>
- 
 </body>
 </html>
