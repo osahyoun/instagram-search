@@ -33,11 +33,11 @@ Instagram.Template.generate = function(template, data){
 // ** Main Application Code
 // ************************
 (function(){
-  
+
   function init(){
     bindEventHandlers();
   }
-  
+
   function toTemplate(photo){
     photo = {
       count: photo.likes.count,
@@ -54,14 +54,14 @@ Instagram.Template.generate = function(template, data){
 
     $('.paginate a').attr('data-max-tag-id', photos.pagination.next_max_id)
                     .fadeIn();
-    
+
     $.each(photos.data, function(index, photo){
       photos_html += toTemplate(photo);
     });
 
     $('div#photos-wrap').append(photos_html);
   }
-  
+
 
   function generateResource(tag){
     var config = Instagram.Config, url;
@@ -84,7 +84,7 @@ Instagram.Template.generate = function(template, data){
       return next_page || url;
     };
   }
-  
+
   function paginate(max_id){    
     $.getJSON(generateUrl(tag), toScreen);
   }
@@ -106,9 +106,13 @@ Instagram.Template.generate = function(template, data){
       fetchPhotos(tagID);
       return false;
     });
-    
-    // Bind an event handler to the `click` event on the form's button
-    $('form#search button').on('click', function(){
+
+    // Bind an event handler to the `submit` event on the form
+    $('form').on('submit', function(e){
+
+      // Stop the form from fulfilling its destinty.
+      e.preventDefault();
+
       // Extract the value of the search input text field.
       var tag = $('input.search-tag').val();
 
@@ -118,7 +122,7 @@ Instagram.Template.generate = function(template, data){
       // Stop event propagation.
       return false;
     });
-    
+
   }
 
   function showPhoto(p){
