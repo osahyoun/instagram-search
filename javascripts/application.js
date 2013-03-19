@@ -114,13 +114,13 @@ Instagram.Template.generate = function(template, data){
       e.preventDefault();
 
       // Extract the value of the search input text field.
-      var tag = $('input.search-tag').val();
+      var tag = $('input.search-tag').val().trim();
 
-      // Invoke `search`, passing `tag`.
-      search(tag);
+      // Invoke `search`, passing `tag` (unless tag is an empty string).
+      if(tag) {
+        search(tag);
+      };
 
-      // Stop event propagation.
-      return false;
     });
 
   }
