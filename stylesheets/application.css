@@ -12,22 +12,6 @@
   border-radius:0 0 5px 5px;
 }
 
-#search button {
-  float: right;
-  border-radius: 0 3px 3px 0;
-}
-
-#search button span {
-  display: block;
-  border: none;
-  padding: 0;
-  background: transparent url(../images/glass.png) no-repeat 0 0;
-  width: 14px;
-  height: 14px;
-  opacity: .6;
-  text-indent: -10000px;
-}
-
 .search-wrap {
   background: white;
   line-height: 30px;
