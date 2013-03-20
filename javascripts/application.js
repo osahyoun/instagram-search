@@ -7,35 +7,16 @@ Instagram.Config = {
   apiHost: 'https://api.instagram.com'
 };
 
-// Quick and dirty templating solution.
-Instagram.Template = {};
-Instagram.Template.Views = {
-
-  "photo": "<div class='photo'>" +
-            "<a href='{url}' target='_blank'><img class='main' src='{photo}' width='250' height='250' style='display:none;' onload='Instagram.App.showPhoto(this);' /></a>" +
-            "<img class='avatar' width='40' height='40' src='{avatar}' style='' onload='' />" +
-            "<span class='heart'><strong>{count}</strong></span>" +
-          "</div>"
-};
-
-Instagram.Template.generate = function(template, data){
-  var re, resource;
-  
-  template = Instagram.Template.Views[template];
-  for(var attribute in data){
-    re = new RegExp("{" + attribute + "}","g");
-    template = template.replace(re, data[attribute]);
-  }
-  return template;
-};
 
 // ************************
 // ** Main Application Code
 // ************************
 (function(){
+  var photoTemplate;
 
   function init(){
     bindEventHandlers();
+    photoTemplate = _.template($('#photo-template').html());
   }
 
   function toTemplate(photo){
@@ -45,10 +26,10 @@ Instagram.Template.generate = function(template, data){
       photo: photo.images.low_resolution.url,
       url: photo.link
     };
-    
-    return Instagram.Template.generate('photo', photo);
-  }  
-  
+
+    return photoTemplate(photo);
+  }
+
   function toScreen(photos){
     var photos_html = '';
 
@@ -62,12 +43,11 @@ Instagram.Template.generate = function(template, data){
     $('div#photos-wrap').append(photos_html);
   }
 
-
   function generateResource(tag){
     var config = Instagram.Config, url;
-    
+
     if(typeof tag === 'undefined'){
-      throw new Error("Resource requires a tag. Try searching for cats!");
+      throw new Error("Resource requires a tag. Try searching for cats.");
     } else {
       // Make sure tag is a string, trim any trailing/leading whitespace and take only the first 
       // word, if there are multiple.
@@ -129,12 +109,13 @@ Instagram.Template.generate = function(template, data){
     $(p).fadeIn();
   }
 
+  // Public API
   Instagram.App = {
     search: search,
     showPhoto: showPhoto,
     init: init
   };
-})();
+}());
 
 $(function(){
   Instagram.App.init();
