@@ -12,7 +12,7 @@ Instagram.Config = {
 // ** Main Application Code
 // ************************
 (function(){
-  var photoTemplate;
+  var photoTemplate, resource;
 
   function init(){
     bindEventHandlers();
