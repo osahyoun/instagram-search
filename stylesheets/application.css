@@ -1,3 +1,6 @@
+body {
+  background: #e3e8ec url(../images/tile.png) repeat 50% 0;
+}
 #search {
   height: 40px;
   padding: 10px;
