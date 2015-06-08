@@ -4,4 +4,4 @@
 
 You can see it working at [grammy.eduvoyage.co.uk](http://grammy.eduvoyage.co.uk)
 
-There is also an accompanying tutorial on my blog: [eduvoyage.com](http://eduvoyage.co.uk)
+There is also an accompanying tutorial on my [blog](http://eduvoyage.co.uk/instagram-search-app.html).
