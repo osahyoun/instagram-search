@@ -121,6 +121,6 @@ $(function(){
   Instagram.App.init();
   
   // Start with a search on cats; we all love cats.
-  Instagram.App.search('cats');  
+  Instagram.App.search('goats');  
 });
 
