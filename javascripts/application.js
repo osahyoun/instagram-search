@@ -120,7 +120,7 @@ Instagram.Config = {
 $(function(){
   Instagram.App.init();
   
-  // Start with a search on cats; we all love cats.
-  Instagram.App.search('cats');  
+  // Start with a search on goats; we all love goats.
+  Instagram.App.search('goats');  
 });
 
