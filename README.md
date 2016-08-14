@@ -1,7 +1,8 @@
 # Instagram Search Web App
 
-### A stupidly simple web app for searching Instagram's API, by tag.
+### It isn't possible anymore to search Instagram's API by tag
 
-You can see it working at [grammy.eduvoyage.co.uk](http://grammy.eduvoyage.co.uk)
+So instead I've changed ditched the code to display my own Instagram
+feed, using a service I built called [BitSalad](http://bitsalad.co)
 
-There is also an accompanying tutorial on my [blog](http://eduvoyage.co.uk/instagram-search-app.html).
+

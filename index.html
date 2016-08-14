@@ -3,30 +3,22 @@
 <head>
   <script src='http://code.jquery.com/jquery-1.7.2.min.js' type='text/javascript' charset='utf-8'></script>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'></script>
+
+  <script src='javascripts/dependencies.js' type='text/javascript' charset='utf-8'></script>
   <script src='javascripts/application.js' type='text/javascript' charset='utf-8'></script>
 
   <link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css' type='text/css' media='screen'>
   <link rel="stylesheet" href="stylesheets/application.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <title>Grammy - Search Instagram Images</title>
 
-  <meta name="description" content="Search for instagram images online.">
+  <meta name="description" content="Show your Instagram Photos">
   <meta name="author" content="Omar Sahyoun">
 </head>
 <body>
   <div class='container'>
     <div class='row'>
       <div class='span12'>
-        <form id='search'>
-          <div class="input-append">
-            <input class='search-tag' type='text' tabindex='1' value='cats' />
-            <button class="btn" id="search-button" dir="ltr" tabindex="2" type="submit">
-              <i class='icon-search'></i>
-            </button>
-          </div>
-        </form>
-
-        <div id='photos-wrap'>
-        </div>
+        <div id='photos-wrap'></div>
 
         <div class='paginate'>
           <a class='btn'  style='display:none;' data-max-tag-id='' href='#'>View More...</a>
@@ -37,11 +29,10 @@
 
   <script type="text/template" id="photo-template">
   <div class='photo'>
-    <a href='<%= url %>' target='_blank'>
-      <img class='main' src='<%= photo %>' width='250' height='250' style='display:none;' onload='Instagram.App.showPhoto(this);' />
+    <a href='' target='_blank'>
+      <img class='main' src={images.standard_resolution.url} width='250' height='250' style=''  />
     </a>
-    <img class='avatar' width='40' height='40' src='<%= avatar %>' />
-    <span class='heart'><strong><%= count %></strong></span>
+    <span class='heart'><strong>{likes.count}</strong></span>
   </div>
   </script>
 </body>
